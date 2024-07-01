@@ -54,7 +54,7 @@
                if (eval(expression) === 10) {
                    isCalculable = true;
                    solutionsList.push(expression);
-                   console.log(expression)
+                //    console.log(expression)
                    return nums;
                }
            } catch (error) {
@@ -87,7 +87,7 @@
                 isCompleted = 1
                 placeholder.children[7].style.backgroundColor = `rgb(${106},${170},${100})`; // SET TO SUCCESSFUL GREEN
                 console.log('isCompleted: ', isCompleted)
-                // window.alert("Congratulations, you've successfully made 10")
+                window.alert("Congratulations, you've successfully made 10")
                 console.log('Solutions List: ',solutionsList)
             }
             
@@ -127,7 +127,7 @@
         // while loop to generate random numbers until the numbers can calculate 10
 
        while (isCalculable == false) {
-           console.log('Looped Started')
+        //    console.log('Looped Started')
            // Generate an array of 4 random numbers between 0 and 9
            var randomNumbers = [];
            for (let i = 0; i < 4; i++) {
@@ -150,10 +150,10 @@
            });
        }
 
-        console.log('randomNumberResults Prior shuffle: ', randomNumberResults)
+        // console.log('randomNumberResults Prior shuffle: ', randomNumberResults)
         // shuffle order of items in randomNumberResults array
         randomNumberResults = randomNumberResults.sort(() => Math.random() - 0.5);
-        console.log('randomNumberResults after shuffle: ', randomNumberResults)
+        // console.log('randomNumberResults after shuffle: ', randomNumberResults)
 
         // randomNumberResults = randomNumberResults.sort(() => Math.random());
         // Replace the text of button 1,2,3,4 with each value of the numbers array
@@ -248,8 +248,6 @@
            counter2 = 1;
            counter3 = 1;
            counter4 = 1;
-        //    isCompleted = 0;
            isFilled = 0
-        //    timer = 0
             placeholder.children[7].style.backgroundColor = `rgb(${201},${180},${88})`;
        });
