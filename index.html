@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Styling for the timer */
+        #timerPlaceholder {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .timerBox {
+            width: 200px;
+            height: 50px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        /* Styling for the placeholder */
+        #placeholder {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        /* Styling for each box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .smallBox {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(211,214,218);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            align-self: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .resultBox {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(201,180,88);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Styling for the buttons */
+        .buttons {
+            margin-top: 20px;
+        }
+        .buttons button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #007BFF;
+            font-weight: bold; /* Add this line to make the text bold */
+            color: white;
+            border: 1px solid black;/* 1px solid black; */
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-right: 5px; /* Add gap between buttons */
+            transition: background-color 0.3s;
+        }
+        .buttons button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        .buttons button:disabled {
+            color: white;
+            background-color: grey !important;
+            cursor: not-allowed;
+        }
+        .arithmeticButtons button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #007BFF;
+            font-weight: bold; /* Add this line to make the text bold */
+            color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 5px;
+            margin-right: 5px; /* Add gap between buttons */
+            transition: background-color 0.3s;
+        }
+        /* .arithmeticButtons button:disabled {
+            background-color: grey;
+            cursor: not-allowed;
+        } */
+        .arithmeticButtons button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        .arithmeticButtons button:disabled {
+            color: white;
+            background-color: grey !important; /* WORKS WITHOUT '!important'IF YOU PUT THIS BEFORE THE HOVER*/
+            cursor: not-allowed;
+        }
+
+        .utilitiesButtons button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+            background-color: #007BFF;
+            font-weight: bold; /* Add this line to make the text bold */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            margin-top: 5px;
+            transition: background-color 0.3s;
+        }
+        .utilitiesButtons button:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        .utilitiesButtons button:disabled {
+            background-color: grey;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <!-- Placeholder for the boxes -->
+    <div id="timerPlaceholder">
+        <div class="timerBox"></div>
+    </div>
+    <div id="placeholder">
+            <div class="box"></div>
+            <div class="smallBox"></div>
+            <div class="box"></div>
+            <div class="smallBox"></div>
+            <div class="box"></div>
+            <div class="smallBox"></div>
+            <div class="box"></div>
+            <div class="resultBox"></div>
+    </div>
+    <!-- Buttons -->
+    <div class="buttons">
+        <div style="display: flex; justify-content:center;">  
+            <button id="button1">1</button>
+            <button id="button2">2</button>
+            <button id="button3">3</button>
+            <button id="button4">4</button>
+        </div>
+    </div>
+    <div class="arithmeticButtons">
+        <div style="display: flex; justify-content:center;">  
+            <button id="add">+</button>
+            <button id="subtract">-</button>
+            <button id="multiply">*</button>
+            <button id="divide">/</button>
+        </div> 
+    </div>
+    <div class="utilitiesButtons">
+        <div style="display: flex; justify-content:center;">    
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    </div>
+    <script src = "script.js"></script>
+</body>
+</html>
+
