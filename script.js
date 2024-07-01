@@ -87,6 +87,7 @@
                 isCompleted = 1
                 placeholder.children[7].style.backgroundColor = `rgb(${106},${170},${100})`; // SET TO SUCCESSFUL GREEN
                 console.log('isCompleted: ', isCompleted)
+                await sleep(100);
                 window.alert("Congratulations, you've successfully made 10")
                 console.log('Solutions List: ',solutionsList)
             }
