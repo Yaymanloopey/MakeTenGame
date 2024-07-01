@@ -10,6 +10,7 @@
        const multiplyButton = document.getElementById('multiply');
        const divideButton = document.getElementById('divide');
        const reset = document.getElementById('reset');
+       const getNewNumbers = document.getElementById('GetNewNumbers');
        const timerBox = document.getElementById('timerPlaceholder');
 
        // INITIALISING A LIST OF VARIABLES TO BE USED IN LOGIC BELOW
@@ -252,3 +253,7 @@
            isFilled = 0
             placeholder.children[7].style.backgroundColor = `rgb(${201},${180},${88})`;
        });
+
+       getNewNumbers.addEventListener('click', function() {
+           window.location.reload();
+    });
