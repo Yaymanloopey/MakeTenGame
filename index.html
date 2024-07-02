@@ -7,7 +7,7 @@
     <style>
         /* Styling for the timer */
         #timerPlaceholder {
-            margin-top: 100px;
+            margin-top: 50px;
             display: flex;
             flex-direction: row;
             /* flex-wrap: wrap; */
@@ -84,7 +84,7 @@
             width: 50px;
             height: 50px;
             font-size: 20px;
-            background-color: #007BFF;
+            background-color: #FCB913;/* #007BFF; */
             font-weight: bold; /* Add this line to make the text bold */
             color: white;
             border: 1px solid black;/* 1px solid black; */
@@ -94,7 +94,7 @@
             transition: background-color 0.3s;
         }
         .buttons button:hover:not(:disabled) {
-            background-color: #0056b3;
+            background-color: #b1820d;
         }
         .buttons button:disabled {
             color: white;
@@ -105,22 +105,18 @@
             width: 50px;
             height: 50px;
             font-size: 20px;
-            background-color: #007BFF;
+            background-color: #F48720;
             font-weight: bold; /* Add this line to make the text bold */
             color: white;
             border: 1px solid black;
-            border-radius: 5px;
+            border-radius: 15px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             margin-top: 5px;
             margin-right: 5px; /* Add gap between buttons */
             transition: background-color 0.3s;
         }
-        /* .arithmeticButtons button:disabled {
-            background-color: grey;
-            cursor: not-allowed;
-        } */
         .arithmeticButtons button:hover:not(:disabled) {
-            background-color: #0056b3;
+            background-color: #a35812;
         }
         .arithmeticButtons button:disabled {
             color: white;
@@ -132,7 +128,7 @@
             width: 100px;
             height: 50px;
             font-size: 20px;
-            background-color: #007BFF;
+            background-color: #96979B;
             font-weight: bold; /* Add this line to make the text bold */
             color: white;
             border: none;
@@ -142,7 +138,7 @@
             transition: background-color 0.3s;
         }
         .utilitiesButtons button:hover:not(:disabled) {
-            background-color: #0056b3;
+            background-color: #37373a;
         }
         .utilitiesButtons button:disabled {
             background-color: grey;
@@ -152,6 +148,9 @@
 </head>
 <body>
     <!-- Placeholder for the boxes -->
+    <div style="display: flex; justify-content:center;">  
+        <img src="Sydney Trains Logo.png" alt="Sydney Trains Logo" width="350" height="114">
+    </div> 
     <div id="timerPlaceholder">
         <div class="timerBox"></div>
     </div>
@@ -188,8 +187,10 @@
         </div>
         <div style="display: flex; justify-content:center;"> 
             <style>
+                /* This line targets the second child div of the utilitiesButtons class,
+                   which is the Get New Numbers button. */
                 .utilitiesButtons div:nth-child(2) {
-                    margin-top: 50px;
+                    margin-top: 20px;
                 }
             </style>
             <button id="GetNewNumbers">Get New Numbers</button>
