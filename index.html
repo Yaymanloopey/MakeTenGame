@@ -7,7 +7,7 @@
     <style>
         /* Styling for the timer */
         #timerPlaceholder {
-            margin-top: 50px;
+            margin-top: 20px;
             display: flex;
             flex-direction: row;
             /* flex-wrap: wrap; */
@@ -29,7 +29,7 @@
         }
         /* Styling for the placeholder */
         #placeholder {
-            margin-top: 10px;
+            margin-top: 20px;
             display: flex;
             flex-direction: row;
             /* flex-wrap: wrap; */
@@ -149,7 +149,7 @@
 <body>
     <!-- Placeholder for the boxes -->
     <div style="display: flex; justify-content:center;">  
-        <img src="Sydney Trains Logo.png" alt="Sydney Trains Logo" width="350" height="114">
+        <img src="MakeTen Game Logo.png" alt="MakeTen Game Logo" width="350" height="114" style="margin-top: 20px;">
     </div> 
     <div id="timerPlaceholder">
         <div class="timerBox"></div>
@@ -182,7 +182,14 @@
         </div> 
     </div>
     <div class="utilitiesButtons">
-        <div style="display: flex; justify-content:center;">    
+        <div style="display: flex; justify-content:center;">   
+            <style>
+                /* This line targets the second child div of the utilitiesButtons class,
+                   which is the Get New Numbers button. */
+                .utilitiesButtons div:nth-child(1) {
+                    margin-top: 20px;
+                }
+            </style> 
             <button id="reset">Reset</button>
         </div>
         <div style="display: flex; justify-content:center;"> 
