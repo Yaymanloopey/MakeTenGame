@@ -7,7 +7,7 @@
     <style>
         /* Styling for the timer */
         #timerPlaceholder {
-            margin-top: 20px;
+            margin-top: 5px;
             display: flex;
             flex-direction: row;
             /* flex-wrap: wrap; */
@@ -39,14 +39,15 @@
         }
         /* Styling for each box */
         .box {
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             background-color: lightgrey;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 20px;
             font-weight: bold;
+            align-self: center;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
@@ -64,8 +65,8 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
         .resultBox {
-            width: 100px;
-            height: 100px;
+            width: 70px;
+            height: 70px;
             background-color: rgb(201,180,88);
             display: flex;
             justify-content: center;
@@ -187,7 +188,7 @@
                 /* This line targets the second child div of the utilitiesButtons class,
                    which is the Get New Numbers button. */
                 .utilitiesButtons div:nth-child(1) {
-                    margin-top: 20px;
+                    margin-top: 10px;
                 }
             </style> 
             <button id="reset">Reset</button>
@@ -197,7 +198,7 @@
                 /* This line targets the second child div of the utilitiesButtons class,
                    which is the Get New Numbers button. */
                 .utilitiesButtons div:nth-child(2) {
-                    margin-top: 20px;
+                    margin-top: 10px;
                 }
             </style>
             <button id="GetNewNumbers">Get New Numbers</button>
